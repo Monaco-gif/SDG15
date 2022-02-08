@@ -10,15 +10,26 @@ import { ForestArea } from '../models/forest_area.model';
   styleUrls: ['./forest.component.css']
 })
 export class ForestComponent implements OnInit {
-  obsforestarea:Observable<ForestArea[]>
+  obsforestarea: Observable<ForestArea[]>
   chartData = [];
   chartDataArray = [];
 
-  constructor(public http: HttpClient) { 
+  options = {
+    // volendo si puo cambiare anche le dimensioni. guardare sdg14 palo
+    colorAxis: {
+      //il primo colore sara quello piu a sinistra nella legenda. l ultimo quello piu a destra.
+      colors: [
+        '#F7FCFD',
+        'orange'
+      ]
+    },
+  };
+ 
+  constructor(public http: HttpClient) {
 
   }
   forestareaData = (data: ForestArea[]) => {
-   
+
     console.log(data);
     for (var i in data) {
       this.chartData.push([
@@ -27,14 +38,14 @@ export class ForestComponent implements OnInit {
       ]);
     }
     this.chartDataArray = [];
-    this.chartDataArray.push(new ChartData('EN_MAR_BEALITSQ', 'GeoChart', this.chartData, ['Entity', 'Forest_cover'], {}));
+    this.chartDataArray.push(new ChartData('EN_MAR_BEALITSQ', 'GeoChart', this.chartData, ['Entity', 'Forest_cover'], this.options));
   }
 
   ngOnInit(): void {
     this.obsforestarea = this.http.get<ForestArea[]>(
-      'https://5000-monacogif-sdg15-t5tx8vknusp.ws-eu30.gitpod.io/forest_area'
+      'https://5000-monacogif-sdg15-7r0hfp7msxd.ws-eu30.gitpod.io/forest_area'
     );
     this.obsforestarea.subscribe(this.forestareaData);
-    }
+  }
 }
 
