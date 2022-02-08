@@ -27,6 +27,31 @@ def get_forest_area():
     list_cur = list(forest_area.find({},{"_id":0}))
     return dumps(list_cur)
 
+@app.route('/Red_List_Index', methods=['GET'])
+def get_Red_List_Index():
+    Red_List_Index = mongo.db.Red_List_Index
+    list_cur = list(Red_List_Index.find({},{"_id":0}))
+    return dumps(list_cur)
+
+@app.route('/Terrestrial_area', methods=['GET'])
+def get_Terrestrial_area():
+    Terrestrial_area = mongo.db.Terrestrial_Protected_Areas
+    list_cur = list(Terrestrial_area.find({},{"_id":0}))
+    return dumps(list_cur)
+
+@app.route('/alien_species', methods=['GET'])
+def get_alien_species():
+    alien_species = mongo.db.AlienSpecies
+    list_cur = list(alien_species.find({},{"_id":0}))
+    return dumps(list_cur)
+
+@app.route('/Biodiversity', methods=['GET'])
+def get_Biodiversity():
+    Biodiversity = mongo.db.Biodiversity
+    list_cur = list(Biodiversity.find({},{"_id":0}))
+    return dumps(list_cur)
+
+
 # Checks to see if the name of the package is the run as the main package.
 if __name__ == "__main__":
     # Runs the Flask application only if the main.py file is being run.
