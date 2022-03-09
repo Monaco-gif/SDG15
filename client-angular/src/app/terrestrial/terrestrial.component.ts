@@ -33,7 +33,7 @@ export class TerrestrialComponent implements OnInit {
 
   ngOnInit(): void {
     this.obsTerrestrial = this.http.get<Terrestrial[]>(
-      'https://5000-monacogif-sdg15-7r0hfp7msxd.ws-eu30.gitpod.io/Terrestrial_area'
+      'https://5000-monacogif-sdg15-2p60b453th7.ws-eu34.gitpod.io/Terrestrial_area'
     );
     this.obsTerrestrial.subscribe(this.TerrestrialData);
     }

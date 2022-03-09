@@ -8,6 +8,7 @@ import { RedListComponent } from './red-list/red-list.component';
 import { TerrestrialComponent } from './terrestrial/terrestrial.component';
 import { AlienSpeciesComponent } from './alien-species/alien-species.component';
 import { BiodiversityComponent } from './biodiversity/biodiversity.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { BiodiversityComponent } from './biodiversity/biodiversity.component';
   imports: [
     BrowserModule,
     HttpClientModule,
-    GoogleChartsModule
+    GoogleChartsModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]

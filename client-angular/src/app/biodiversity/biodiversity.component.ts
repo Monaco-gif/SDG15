@@ -46,7 +46,7 @@ export class BiodiversityComponent implements OnInit {
 
   ngOnInit(): void {
     this.obsBiodiversity = this.http.get<Biodiversity[]>(
-      'https://5000-monacogif-sdg15-7r0hfp7msxd.ws-eu30.gitpod.io/Biodiversity'
+      'https://5000-monacogif-sdg15-2p60b453th7.ws-eu34.gitpod.io/Biodiversity'
     );
     this.obsBiodiversity.subscribe(this.BiodiversityData);
   }
