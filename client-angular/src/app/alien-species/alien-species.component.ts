@@ -43,7 +43,7 @@ export class AlienSpeciesComponent implements OnInit {
 
   ngOnInit(): void {
     this.obsAlien = this.http.get<Alien[]>(
-      'https://5000-monacogif-sdg15-2p60b453th7.ws-eu34.gitpod.io/alien_species'
+      'https://5000-monacogif-sdg15-uzanuntn7mj.ws-eu34.gitpod.io/alien_species'
     );
     this.obsAlien.subscribe(this.AlienData);
   }

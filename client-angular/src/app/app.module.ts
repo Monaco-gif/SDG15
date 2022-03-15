@@ -9,6 +9,10 @@ import { TerrestrialComponent } from './terrestrial/terrestrial.component';
 import { AlienSpeciesComponent } from './alien-species/alien-species.component';
 import { BiodiversityComponent } from './biodiversity/biodiversity.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { Routes } from '@angular/router';
+import { AppRoutingModule } from './app-routing.module';
+
+
 
 @NgModule({
   declarations: [
@@ -23,6 +27,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     BrowserModule,
     HttpClientModule,
     GoogleChartsModule,
+    AppRoutingModule,
     NgbModule
   ],
   providers: [],

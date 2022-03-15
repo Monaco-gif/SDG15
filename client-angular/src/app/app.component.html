@@ -1,28 +1,34 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">Navbar</a>
+    <a class="navbar-brand" href="https://sdg-tracker.org/biodiversity">SDG15</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item active">
-          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="#" >Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Features</a>
+          <a class="nav-link" routerLink="/alien-species">alien-species</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Pricing</a>
+          <a class="nav-link" routerLink="/biodiversity">biodiversity</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link disabled" href="#">Disabled</a>
+          <a class="nav-link" routerLink="/forest">forest</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/red-list">red-list</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/terrestrial">terrestrial</a>
         </li>
       </ul>
     </div>
   </nav>
 
-<app-forest></app-forest>
-<app-red-list></app-red-list>
-<app-terrestrial></app-terrestrial>
-<app-alien-species></app-alien-species>
-<app-biodiversity></app-biodiversity>
+
+
+<router-outlet></router-outlet>
+
+<img src="/workspace/SDG15/client-angular/src/app/img/foresta-magica-gio.jpg">

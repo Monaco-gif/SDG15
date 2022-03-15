@@ -32,7 +32,7 @@ export class RedListComponent implements OnInit {
 
   ngOnInit(): void {
     this.obsRedList = this.http.get<RedList[]>(
-      'https://5000-monacogif-sdg15-2p60b453th7.ws-eu34.gitpod.io/Red_List_Index')
+      'https://5000-monacogif-sdg15-uzanuntn7mj.ws-eu34.gitpod.io/Red_List_Index')
     this.obsRedList.subscribe(this.RedListData);
     }
 }

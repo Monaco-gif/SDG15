@@ -43,7 +43,7 @@ export class ForestComponent implements OnInit {
 
   ngOnInit(): void {
     this.obsforestarea = this.http.get<ForestArea[]>(
-      'https://5000-monacogif-sdg15-2p60b453th7.ws-eu34.gitpod.io/forest_area'
+      'https://5000-monacogif-sdg15-uzanuntn7mj.ws-eu34.gitpod.io/forest_area'
     );
     this.obsforestarea.subscribe(this.forestareaData);
   }
