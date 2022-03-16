@@ -3,7 +3,8 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  urlserver: "https://5000-monacogif-sdg15-rwkvet1rle9.ws-eu34.gitpod.io"
 };
 
 /*

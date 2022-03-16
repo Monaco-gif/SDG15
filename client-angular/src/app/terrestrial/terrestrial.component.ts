@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
+import { environment } from 'src/environments/environment';
 import { ChartData } from '../models/chart.model';
 import { Terrestrial } from '../models/terrestrial.model';
 
@@ -32,9 +33,7 @@ export class TerrestrialComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.obsTerrestrial = this.http.get<Terrestrial[]>(
-      'https://5000-monacogif-sdg15-uzanuntn7mj.ws-eu34.gitpod.io/Terrestrial_area'
-    );
+    this.obsTerrestrial = this.http.get<Terrestrial[]>( environment.urlserver + '/Terrestrial_area' );
     this.obsTerrestrial.subscribe(this.TerrestrialData);
     }
 

@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
+import { environment } from 'src/environments/environment';
 import { ChartData } from '../models/chart.model';
 import { ForestArea } from '../models/forest_area.model';
 
@@ -42,9 +43,7 @@ export class ForestComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.obsforestarea = this.http.get<ForestArea[]>(
-      'https://5000-monacogif-sdg15-uzanuntn7mj.ws-eu34.gitpod.io/forest_area'
-    );
+    this.obsforestarea = this.http.get<ForestArea[]>( environment.urlserver + '/forest_area' );
     this.obsforestarea.subscribe(this.forestareaData);
   }
 }

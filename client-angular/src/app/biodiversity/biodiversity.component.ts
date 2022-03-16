@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
+import { environment } from 'src/environments/environment';
 import { Biodiversity } from '../models/Biodiversity.model';
 import { ChartData } from '../models/chart.model';
 
@@ -45,9 +46,7 @@ export class BiodiversityComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.obsBiodiversity = this.http.get<Biodiversity[]>(
-      'https://5000-monacogif-sdg15-uzanuntn7mj.ws-eu34.gitpod.io/Biodiversity'
-    );
+    this.obsBiodiversity = this.http.get<Biodiversity[]>( environment.urlserver + '/Biodiversity' );
     this.obsBiodiversity.subscribe(this.BiodiversityData);
   }
 }

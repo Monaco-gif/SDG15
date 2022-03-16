@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
+import { environment } from 'src/environments/environment';
 import { Alien } from '../models/alien_species.model';
 import { ChartData } from '../models/chart.model';
 
@@ -42,9 +43,7 @@ export class AlienSpeciesComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.obsAlien = this.http.get<Alien[]>(
-      'https://5000-monacogif-sdg15-uzanuntn7mj.ws-eu34.gitpod.io/alien_species'
-    );
+    this.obsAlien = this.http.get<Alien[]>( environment.urlserver + '/alien_species' );
     this.obsAlien.subscribe(this.AlienData);
   }
 

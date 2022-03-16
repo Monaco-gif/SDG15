@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
+import { environment } from 'src/environments/environment';
 import { ChartData } from '../models/chart.model';
 import { RedList } from '../models/red-list.model';
 
@@ -31,8 +32,7 @@ export class RedListComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.obsRedList = this.http.get<RedList[]>(
-      'https://5000-monacogif-sdg15-uzanuntn7mj.ws-eu34.gitpod.io/Red_List_Index')
+    this.obsRedList= this.http.get<RedList[]>( environment.urlserver + '/Red_List_Index' );
     this.obsRedList.subscribe(this.RedListData);
     }
 }
