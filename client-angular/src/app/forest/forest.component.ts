@@ -21,7 +21,7 @@ export class ForestComponent implements OnInit {
       //il primo colore sara quello piu a sinistra nella legenda. l ultimo quello piu a destra.
       colors: [
         '#F7FCFD',
-        'orange'
+        'green'
       ]
     },
   };

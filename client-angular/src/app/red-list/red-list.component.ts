@@ -15,6 +15,19 @@ export class RedListComponent implements OnInit {
   chartData = [];
   chartDataArray = [];
 
+  options = {
+    // volendo si puo cambiare anche le dimensioni. guardare sdg14 palo
+    colorAxis: {
+      //il primo colore sara quello piu a sinistra nella legenda. l ultimo quello piu a destra.
+      colors: [
+        'red',
+        '008000',
+        
+        
+      ]
+    },
+  };
+
   constructor(public http: HttpClient) { 
 
   }
