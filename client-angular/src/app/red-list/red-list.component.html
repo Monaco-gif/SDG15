@@ -1,4 +1,10 @@
-
+<h1>L'indice della lista rossa (RLI) definisce lo stato di conservazione dei
+  principali gruppi di specie e misura le tendenze nella proporzione di
+  specie che dovrebbero rimanere esistenti nel prossimo futuro senza
+  ulteriori azioni di conservazione.Un valore RLI di 1,0 equivale a tutte
+  le specie classificate come "Least Concern" e quindi che nessuna
+  dovrebbe estinguersi nel prossimo futuro. Un valore pari a 0 indica
+  che tutte le specie si sono estinte.</h1>
 
 <div class="container" *ngFor="let chart of chartDataArray">
     <google-chart [title]="chart.title" [type]="chart.type" [data]="chart.data" [columns]="chart.columns"
